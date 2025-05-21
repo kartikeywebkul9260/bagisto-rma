@@ -848,7 +848,9 @@
                                         <div
                                             v-if="messages.length"
                                             v-for="message in messages"
-                                            :style="message.is_admin != 1 ? 'text-align:left; background-color: #a7a7a7' : 'text-align:right; background-color: #F0F0F0'"
+                                            :class="message.is_admin != 1 
+                                                ? 'text-left bg-gray-400 text-black dark:bg-gray-900 dark:text-gray-300' 
+                                                : 'text-right bg-gray-100 text-black dark:bg-gray-800 dark:text-gray-300'"
                                             class="p-4 mb-3 rounded-md"
                                         >
                                             <div class="title">
@@ -865,7 +867,8 @@
                                             </div>
 
                                             <div
-                                                class="mt-4 text-base font-medium value dark:text-black-300"
+                                                class="text-base font-medium value dark:text-black-300"
+                                                style="margin-top:10px; word-break: break-all;"
                                                 v-html="message.message"
                                             >
                                             </div>
@@ -1345,7 +1348,10 @@
                                 <div
                                     v-if="messages.length"
                                     v-for="message in messages"
-                                    :style="message.is_admin != 1 ? 'text-align:left; background-color: #a7a7a7' : 'text-align:right; background-color: #F0F0F0'"
+                                    :class="message.is_admin != 1 
+                                        ? 'text-left bg-gray-400 text-black dark:bg-gray-900 dark:text-gray-300' 
+                                        : 'text-right bg-gray-100 text-black dark:bg-gray-800 dark:text-gray-300'"
+
                                     class="mb-3 rounded-md"
                                 >
                                     <div class="title">
@@ -1362,7 +1368,8 @@
                                     </div>
 
                                     <div
-                                        class="mt-4 text-base font-medium value dark:text-black-300"
+                                        class="text-base font-medium value dark:text-black-300"
+                                        style="margin-top:10px; word-break: break-all;"
                                         v-html="message.message"
                                     >
                                     </div>
