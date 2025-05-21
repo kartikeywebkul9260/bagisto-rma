@@ -849,7 +849,6 @@
                                             v-if="messages.length"
                                             v-for="message in messages"
                                             :style="message.is_admin != 1 ? 'text-align:left; background-color: #a7a7a7' : 'text-align:right; background-color: #F0F0F0'"
-                                            style="word-break: break-all;"
                                             class="p-4 mb-3 rounded-md"
                                         >
                                             <div class="title">
@@ -866,8 +865,7 @@
                                             </div>
 
                                             <div
-                                                class="text-base font-medium value dark:text-black-300"
-                                                style="margin-top:10px; word-break: break-all;"
+                                                class="mt-4 text-base font-medium value dark:text-black-300"
                                                 v-html="message.message"
                                             >
                                             </div>
@@ -1348,7 +1346,6 @@
                                     v-if="messages.length"
                                     v-for="message in messages"
                                     :style="message.is_admin != 1 ? 'text-align:left; background-color: #a7a7a7' : 'text-align:right; background-color: #F0F0F0'"
-                                    style="word-break: break-all;"
                                     class="mb-3 rounded-md"
                                 >
                                     <div class="title">
@@ -1365,8 +1362,7 @@
                                     </div>
 
                                     <div
-                                        class="text-base font-medium value dark:text-black-300"
-                                        style="margin-top:10px; word-break: break-all;"
+                                        class="mt-4 text-base font-medium value dark:text-black-300"
                                         v-html="message.message"
                                     >
                                     </div>
